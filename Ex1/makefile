@@ -13,11 +13,11 @@ libwelcome.a: welcome.c
 
 main_stat.x: libwelcome.a main.c
 	$(comp) $(par_opt) -c -o main.o main.c
-	$(comp) $(par_opt) -L. -o main_stat.x main.o -l:libwelcome.a
+	$(comp) $(par_opt) -L. -o main_stat.x main.o -l:./libwelcome.a
 	
 main_dyn.x: libwelcome.so main.c
 	$(comp) $(par_opt) -c -o main.o main.c
-	$(comp) $(par_opt) -L. -o main_dyn.x main.o -l:libwelcome.so
+	$(comp) $(par_opt) -L. -o main_dyn.x main.o -l:./libwelcome.so
 
 clean:
 	rm -f *.x *.a *.so *.o
