@@ -1,0 +1,48 @@
+In der dritten "Hausarbeit" wird es um die Vorlesungen mit "Make und Kompilieren" gehen.
+Bitte beachten Sie, dass die Abgabe der Lösung verpflichtend ist wenn Sie sich für die
+Prüfung angemeldet haben.
+Geben Sie immer die benutzten Befehle an, sowie wenn nötig eine Datei mit der Lösung.
+Senden Sie uns das komplette Arbeitsverzeichnis (auch verstekcte Dateien/Ordner) mit ihrer Lösung zu.
+(Nicht nur die Files die zur Lösung führen)
+
+Die Abgabe erfolgt bis spätestens zum 15.02.2019. Bitte stellen Sie diesmal sicher, dass Ihre Abgabe funktioniert.
+Wenn Sie Fragen haben zur Bearbeitung  melden Sie sich bitte rechtzeitig.
+!!Der 15.2. stellt dieses mal die letzte Möglichkeit dar, eine funktionierende Abgabe einzureichen!!
+
+Bitte senden Sie ihre Lösung an beide Betreuer:
+
+pati@stfs.tu-darmstadt.de
+haspel@stfs.tu-darmstadt.de
+
+Viel Spaß bei der Lösung!!
+
+Aufgabe:
+
+
+Ex 1: Verzeichnis "Ex1"
+Die Bearbeitung der Aufgabe soll in einem git-repository durchgeführt werden.
+Bitte senden Sie das "git log" mit der Einreichung der Aufgabe mit.
+
+Im Verzeichnis Ex1 liegt ein C-Code File (welcome.c) und ein Header file (welcome.h).
+Diese Dateien deklarieren und definieren die Funktion "void hello()".
+
+Schreiben Sie ein "main.c" file mit einer sogenannten "main()"- Funktion, in der "main()"-Funktion soll die Funktion "void hello()" aufgerufen werden.
+
+
+Schreibe ein Makefile mit folgenden Targets:
+- "dynamic" -> kompiliere eine dynamische Bibliothek libwelcome.so aus welcome.c
+- "static" -> kompiliere eine statische Bibliothek libwelcome.a aus welcome.c
+- "main_dynamic" -> kompiliere eine ausführbare Datei main_dyn.x aus dem Code-File main.c, dabei soll main_dyn.x dynamisch mit libwelcome.so verlinkt werden.
+- "main_static" -> kompiliere eine ausführbar Datei main_stat.x aus main.c, dabei soll main_stat.x  statisch mit libwelcome.a verlinkt werden
+- "clean" -> löschen Sie die temporären Datein, die erstellten  ausführbaren Dateien  und alle erstellten Bibliotheken ()
+- "all" -> die ersten 4 Targets sollen ausgeführt werden
+
+Schreiben Sie  das Makefile mit den richtigen Abhängigkeiten. Vermeide zu rekompilieren,  wenn es nicht erforderlich ist.(Tipp: object Datei)
+Fügen Sie einen Parameter ein, damit das Optimization level mit diesem Parameter angesteuert/verändert werden kann.
+
+Schreiben Sie ein Bash Skript das die beide Files( "main_dyn.x" und "main_stat.x" ) ausführt. (Hinweis: versichern Sie sich, dass die Files auch wirklich ausgeführt werden).
+
+Zusatzaufgabe(freiwillig): Verzechnis "Ex2"
+
+In Ex2 gibt es eine vorkompilierte dynamische Bibliothek ("libprintZahlen.so") und das zugehörige Header file ("printZahlen.h"). Das C-Code File steht Ihnen nicht zur Verfügung.
+Schreibe Sie ein main.c File, dass die Funtionmit der Zahl 10 aufruft und ausführt (den Funktionsnamen finden Sie selbstständig heraus).
